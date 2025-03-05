@@ -1,3 +1,4 @@
+/* Center the app and set a max width */
 #root {
   max-width: 1280px;
   margin: 0 auto;
@@ -5,21 +6,31 @@
   text-align: center;
 }
 
-.entire-todo{
+/* Main container for the entire To-Do app */
+.entire-todo {
   display: flex;
   flex-direction: column;
+  align-items: center;
   padding: 10px;
 }
 
-.display-todo{
-  border: 1px solid black;
+/* Navbar styles */
+.navbar {
+  width: 100%;
+  background: #007bff;
   padding: 10px;
-  margin-top: 20px;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
   border-radius: 10px;
 }
 
-.add-todo{
-  padding: 10px;
+/* Add To-Do Section */
+.add-todo {
+  width: 90%;
+  max-width: 500px;
+  padding: 15px;
   background-color: aqua;
   margin-top: 20px;
   border-radius: 10px;
@@ -27,20 +38,134 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 10px;
+  gap: 10px;
+  flex-wrap: wrap;
 }
 
-.todo-input{
-  margin: 10px;
+/* Input field styling */
+.todo-input {
+  flex: 1;
+  min-width: 200px;
+  padding: 8px;
   border-radius: 5px;
-  padding: 5px;
+  border: 1px solid #ccc;
 }
 
-.add-todo-button, .clear-all-button{
+/* Buttons - Add & Clear All */
+.add-todo-button, .clear-all-button {
   margin: 10px;
   border-radius: 5px;
-  padding-left: 10px;
-  padding-right: 10px;
+  padding: 8px 15px;
   background-color: lightblue;
   cursor: pointer;
+  border: none;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.add-todo-button:hover {
+  background-color: #5dade2;
+}
+
+.clear-all-button {
+  background-color: #ff4d4d;
+  color: white;
+}
+
+.clear-all-button:hover {
+  background-color: #d90429;
+}
+
+/* Display To-Do Section */
+.display-todo {
+  width: 90%;
+  max-width: 500px;
+  border: 1px solid black;
+  padding: 15px;
+  margin-top: 20px;
+  border-radius: 10px;
+  background: #f9f9f9;
+}
+
+/* Individual To-Do Item */
+.todo-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: white;
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  transition: 0.3s;
+}
+
+/* Add hover effect to To-Do items */
+.todo-item:hover {
+  background: #f1f1f1;
+}
+
+/* Completed task styling */
+.finished {
+  text-decoration: line-through;
+  color: gray;
+  font-style: italic;
+}
+
+/* Toggle Finished & Delete Buttons */
+.toggle-button, .delete-button {
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.toggle-button {
+  background: #28a745;
+  color: white;
+}
+
+.toggle-button:hover {
+  background: #218838;
+}
+
+.delete-button {
+  background: #dc3545;
+  color: white;
+}
+
+.delete-button:hover {
+  background: #c82333;
+}
+
+/* Checkbox to show/hide completed todos */
+.toggle-finished {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .add-todo {
+    flex-direction: column;
+  }
+
+  .add-todo-button, .clear-all-button {
+    width: 100%;
+  }
+
+  .todo-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .todo-item-buttons {
+    display: flex;
+    gap: 5px;
+    margin-top: 5px;
+  }
 }
