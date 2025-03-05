@@ -1,0 +1,35 @@
+.navbar{
+    border: 2px solid black;
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80vw;
+    background-color: #f7f7f7;
+}
+
+.navbar-item{
+    border-radius: 5px;
+    padding: 10px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.left-navbar{
+    font-weight:bold;
+}
+
+.right-navbar{
+    display: flex;
+    justify-content: space-between;
+    width: 10%
+}
+
+.button{
+    border-radius: 10px;
+    padding: 10px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.button:hover{
+    background-color: #d7d7d7;
+}
