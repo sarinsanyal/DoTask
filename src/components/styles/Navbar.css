@@ -1,11 +1,11 @@
 .navbar{
-    border: 2px solid black;
+    border: 1px solid black;
     border-radius: 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 80vw;
-    background-color: #f7f7f7;
+    background-color:antiquewhite;
 }
 
 .navbar-item{
@@ -18,10 +18,13 @@
     font-weight:bold;
 }
 
-.right-navbar{
+.right-navbar {
     display: flex;
     justify-content: space-between;
-    width: 10%
+    align-items: center;
+    gap: 10px; 
+    min-width: fit-content; 
+    flex-wrap: wrap;
 }
 
 .button{
